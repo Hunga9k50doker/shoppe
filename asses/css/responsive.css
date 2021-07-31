@@ -1,0 +1,217 @@
+/* tablet and mobile */
+@media(max-width:1023px){
+    :root{
+        --header-height:68px;
+        --navbar-height:0px;
+    }
+    .hide-on-mobile-tablet{
+        display: none !important;
+    }
+
+    .header__search-history{
+        position: absolute;
+        width: 100%;
+        z-index: 1;      
+    }
+    .header__navbar-menu {
+        display: flex;
+      }
+    .header__sort-bar{
+        display: flex;
+        border-radius: 4px;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+ 
+    .header__cart-list::after{
+        display: none;
+    }
+
+     
+    .header__cart-notice{
+        border-radius: 50px;
+       
+
+    }
+  
+}
+
+/* tablet */
+@media(min-width:740px)and (max-width:1023px){
+    .header-with-search{
+        justify-content: center;
+    }
+    .header__search{
+        flex: none;
+        margin-right: 20px;
+        width: 500px;
+     
+    }
+    
+   
+    .header__sort-link-icon{
+        padding-left: 70px;
+        position: absolute;
+        font-size: 1.4rem;
+    }
+    .select-input__list{
+        left: 75%;
+        width: 25%;
+        box-shadow: 0 1px 2px rgba(0,0,0, 0.1);
+    }
+
+    .hide-on-tablet{
+        display: none !important;
+    }
+    .header__cart{
+        width: 60px;
+        /* text-align: right; */
+    }
+
+    .header__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        width: 100%;
+        right: 0;
+        padding: 0 100px;
+        /* margin-top: 0; */
+        margin: 0 ;
+    }
+
+   
+    .header__cart-notice{
+        transform: translate(-45%,-20%);
+        right:auto ;
+        top: auto;
+    }
+    .container{
+        margin-top: calc(var(--header-sort-bar-height) + var(--header-height));
+    }
+    .header__navbar-menu-tab {
+        display: block;
+        padding: 0 12px;
+        position: relative;
+        left: 0;
+        margin-right: 24px;
+        height: var(--header-height);
+        background-color:transparent;
+        border-radius: 4px;
+      
+      }
+      .header__navbar-menu-tab::before {
+        
+          border-right:none;
+      }
+      .header__menu-icon{
+          font-size: 2.5rem;
+      }
+      
+}
+
+/* mobile */
+@media(max-width:739px){
+   
+    .hide-on-mobile{
+        display: none !important;
+    }
+
+    .header-with-search{
+        justify-content: space-between;
+    }
+
+    .header__cart,
+    .header__logo{
+        width: unset;
+    }
+
+    .header__cart-notice{
+        transform: translate(160%,-50%);
+        
+    }
+
+    .header__search{
+        position: fixed;
+        top:var(--header-height) ;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0,0,0, 0.1);
+        padding: 0 16px;
+        animation: mobileSearch ease-in 0.3s;
+        display: none;
+    }
+    .header__mobile-search{
+        display: block;
+    }
+
+    .header__search-history{
+        position: fixed;
+        left: 0;
+        top: calc( var(--header-height) + var(--header-sort-bar-height));
+    }
+    @keyframes mobileSearch{
+        from{
+           
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to{
+           
+            opacity: 1;
+            top:var(--header-height) ;
+        }
+    }
+
+    .home-product-item__sales-off{
+        height: 50px;
+    }
+   
+    .header__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        width: 100%;
+        right: 0;
+        margin: 0;
+    }
+    .pagination-item__link{
+        --height:20px;
+        min-width:20px;
+        font-size: 1.4rem;
+        
+    }
+
+    .header__sort-link-icon{
+        transform: translateX(-350%);
+    }
+
+    .grip__row-category{
+        margin: 0 4px;
+    }
+    .mobile-category {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    
+    .footer__heading,  
+    .footer__list-item {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .footer__download{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__download-link{
+        display: block;
+        padding: 8px 8px;
+    }
+
+}
